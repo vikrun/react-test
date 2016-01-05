@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+      <h2>Basic Table</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Date</th>
+            <th>User</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr id="content"></tr>
+    </tbody>
+</table>
+</div>
+
+<script type="text/jsx">
+    var GenerateRow = React.createClass({
+        render: function() {
+            return(
+                <tr>
+                    <td>{this.props.name}</td>
+                    <td>{this.props.dato}</td>
+                    <td>{this.props.children}</td>
+                </tr>
+                );
+        }
+    });
+
+    React.render(
+        <GenerateRow name="Test1" dato="Test1" email="test1@test.no" />
+        <GenerateRow name="Test2" dato="Test2" email="test2@test.no" />
+        <GenerateRow name="Test3" dato="Test3" email="test3@test.no" />
+        document.getElementById("content")
+        );
+</script>
+
+</body>
+</html>
+
