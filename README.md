@@ -1,2 +1,3 @@
 # react-test
-Template
+Added template.
+Learning React.
